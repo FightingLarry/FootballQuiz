@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_normal" >
+
+    <TextView
+        android:id="@+id/tvFonts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234567890abcdefghijklmnopqrstuvwxyz"
+        android:textColor="@color/main"
+        android:textSize="@dimen/textsize_xxlarge" />
+
+    <TextView
+        android:id="@+id/tvFonts2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234567890abcdefghijklmnopqrstuvwxyz"
+        android:textColor="@color/main"
+        android:textSize="@dimen/textsize_xlarge" />
+
+    <TextView
+        android:id="@+id/tvFonts3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234567890abcdefghijklmnopqrstuvwxyz"
+        android:textColor="@color/main"
+        android:textSize="@dimen/textsize_large" />
+
+    <TextView
+        android:id="@+id/tvFonts4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234567890abcdefghijklmnopqrstuvwxyz"
+        android:textColor="@color/main"
+        android:textSize="@dimen/textsize_large" />
+
+    <com.android4.fragment.fonts.widget.NumLinearLayout
+        android:id="@+id/llNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+    <EditText
+        android:id="@+id/etFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/main"
+        android:textSize="@dimen/textsize_large"
+        android:inputType="number" />
+
+</LinearLayout>

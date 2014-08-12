@@ -1,0 +1,8 @@
+<resources>
+    
+    <color name="main">#FFAA2222</color>
+    <color name="main_bg">#18FF0000</color>
+    <color name="grey">#eeeeee</color>
+    <color name="black_translucent">#AA000000</color>
+    <color name="black">#FF000000</color>
+</resources>
