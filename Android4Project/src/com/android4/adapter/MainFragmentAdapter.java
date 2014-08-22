@@ -3,16 +3,16 @@ package com.android4.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.util.Log;
 
 import com.android4.fragment.fonts.FontsFragment;
 import com.android4.fragment.handler.HandlerThreadFragment;
 import com.android4.fragment.installapk.InstallApkFragment;
+import com.android4.fragment.push.PushFragment;
 import com.android4.fragment.touchimageview.TouchImageViewFragment;
 
 public class MainFragmentAdapter extends FragmentStatePagerAdapter {
 
-    private final String[] TITLE = new String[] { "线程间通信", "图片缩放", "字体", "安装应用", };
+    private final String[] TITLE = new String[] { "通知", "线程间通信", "图片缩放", "字体", "安装应用" };
 
     private final int mCount = TITLE.length;
 
@@ -22,15 +22,16 @@ public class MainFragmentAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        Log.d("Android4Project", "new fragment");
         switch (position) {
             case 0:
-                return HandlerThreadFragment.newInstance();
+                return PushFragment.newInstance();
             case 1:
-                return TouchImageViewFragment.newInstance();
+                return HandlerThreadFragment.newInstance();
             case 2:
-                return FontsFragment.newInstance();
+                return TouchImageViewFragment.newInstance();
             case 3:
+                return FontsFragment.newInstance();
+            case 4:
                 return new InstallApkFragment();
             default:
                 break;

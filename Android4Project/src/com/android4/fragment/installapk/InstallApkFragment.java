@@ -93,7 +93,7 @@ public class InstallApkFragment extends BaseFragment implements OnClickListener 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            Toast.makeText(mContext, "¿ªÊ¼¸´ÖÆapkµ½sdk", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½apkï¿½ï¿½sdk", Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -124,9 +124,9 @@ public class InstallApkFragment extends BaseFragment implements OnClickListener 
         protected void onPostExecute(Boolean result) {
             super.onPostExecute(result);
             if (result) {
-                Toast.makeText(mContext, "¸´ÖÆÍê±Ï", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(mContext, "¸´ÖÆ³ö´í", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "ï¿½ï¿½ï¿½Æ³ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();
             }
 
         }
@@ -162,6 +162,12 @@ public class InstallApkFragment extends BaseFragment implements OnClickListener 
         while ((read = in.read(buffer)) != -1) {
             out.write(buffer, 0, read);
         }
+    }
+
+    @Override
+    protected int getLayoutResource() {
+        // TODO Auto-generated method stub
+        return 0;
     }
 
 }

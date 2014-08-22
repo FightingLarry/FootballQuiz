@@ -50,7 +50,7 @@ public class HandlerThreadFragment extends BaseFragment {
             @Override
             public void handleMessage(Message msg) {
                 Log.i(TAG, "Got an incoming message from the child thread - " + (String) msg.obj);
-                // 接收子线程的消息
+                // 锟斤拷锟斤拷锟斤拷锟竭程碉拷锟斤拷息
                 info.setText((String) msg.obj);
             }
 
@@ -65,7 +65,7 @@ public class HandlerThreadFragment extends BaseFragment {
 
                 if (mChildHandler != null) {
 
-                    //发送消息给子线程
+                    //锟斤拷锟斤拷锟斤拷息锟斤拷锟斤拷锟竭筹拷
                     Message childMsg = mChildHandler.obtainMessage();
                     childMsg.obj = mMainHandler.getLooper().getThread().getName() + " says Hello";
                     mChildHandler.sendMessage(childMsg);
@@ -91,7 +91,7 @@ public class HandlerThreadFragment extends BaseFragment {
         public void run() {
             this.setName("ChildThread");
 
-            //初始化消息循环队列，需要在Handler创建之前
+            //锟斤拷始锟斤拷锟斤拷息循锟斤拷锟斤拷锟叫ｏ拷锟斤拷要锟斤拷Handler锟斤拷锟斤拷之前
             Looper.prepare();
 
             mChildHandler = new Handler() {
@@ -103,7 +103,7 @@ public class HandlerThreadFragment extends BaseFragment {
 
                     try {
 
-                        //在子线程中可以做一些耗时的工作
+                        //锟斤拷锟斤拷锟竭筹拷锟叫匡拷锟斤拷锟斤拷一些锟斤拷时锟侥癸拷锟斤拷
                         sleep(100);
 
                         Message toMain = mMainHandler.obtainMessage();
@@ -126,12 +126,18 @@ public class HandlerThreadFragment extends BaseFragment {
             Log.i(CHILD_TAG, "Child handler is bound to - "
                     + mChildHandler.getLooper().getThread().getName());
 
-            //启动子线程消息循环队列
+            //锟斤拷锟斤拷锟斤拷锟竭筹拷锟斤拷息循锟斤拷锟斤拷锟斤拷
             Looper.loop();
         }
     }
 
     public static HandlerThreadFragment newInstance() {
         return new HandlerThreadFragment();
+    }
+
+    @Override
+    protected int getLayoutResource() {
+        // TODO Auto-generated method stub
+        return 0;
     }
 }

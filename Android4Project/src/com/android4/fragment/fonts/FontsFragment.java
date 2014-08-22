@@ -74,4 +74,10 @@ public class FontsFragment extends BaseFragment {
     public static Fragment newInstance() {
         return new FontsFragment();
     }
+
+    @Override
+    protected int getLayoutResource() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 }

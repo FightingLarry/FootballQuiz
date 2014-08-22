@@ -21,4 +21,10 @@ public class TouchImageViewFragment extends BaseFragment {
         return new TouchImageViewFragment();
     }
 
+    @Override
+    protected int getLayoutResource() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
 }
